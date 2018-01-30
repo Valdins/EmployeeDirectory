@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<!-- Layout for the editor -->
+<com.hendraanggrian.widget.RevealFrameLayout android:id="@+id/revealLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmployeeEditor"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?colorAccent">
+
+         <ScrollView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/root_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_margin"
+                tools:context=".EmployeeEditor">
+
+                <ImageView
+                    android:id="@+id/profileImageView"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_account_circle_black" />
+
+
+                <Button
+                    android:id="@+id/pick_image"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="PICK IMAGE"
+                    android:textColor="#FFF"
+                    android:textSize="16dp"
+                    />
+
+
+                <!-- Overview category -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Label -->
+                    <TextView
+                        android:text="@string/employee_name"
+                        style="@style/CategoryStyle" />
+
+                    <!-- Input fields -->
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="4dp"
+                        android:orientation="vertical">
+
+                        <!-- Name field -->
+                        <EditText
+                            android:id="@+id/edit_employee_firstname"
+                            android:hint="@string/hint_employee_firstname"
+                            android:inputType="textCapWords"
+                            style="@style/EditorFieldStyle" />
+
+                        <!-- Breed field -->
+                        <EditText
+                            android:id="@+id/edit_employee_lastname"
+                            android:hint="@string/hint_employee_lastname"
+                            android:inputType="textCapWords"
+                            style="@style/EditorFieldStyle" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Title category -->
+                <LinearLayout
+                    android:id="@+id/employeeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/category_title"
+                        style="@style/CategoryStyle" />
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="4dp"
+                        android:orientation="vertical">
+
+                        <!-- Name field -->
+                        <EditText
+                            android:id="@+id/edit_employee_title"
+                            android:hint="@string/hint_employee_title"
+                            android:inputType="textCapWords"
+                            style="@style/EditorFieldStyle" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- Department category -->
+                <LinearLayout
+                    android:id="@+id/employeeDepartment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/category_department"
+                        style="@style/CategoryStyle" />
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="4dp"
+                        android:orientation="vertical">
+
+                        <!-- Name field -->
+                        <EditText
+                            android:id="@+id/edit_employee_department"
+                            android:hint="@string/hint_employee_department"
+                            android:inputType="textCapWords"
+                            style="@style/EditorFieldStyle" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- City category -->
+                <LinearLayout
+                    android:id="@+id/employeeCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/category_city"
+                        style="@style/CategoryStyle" />
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="4dp"
+                        android:orientation="vertical">
+
+                        <!-- Name field -->
+                        <EditText
+                            android:id="@+id/edit_employee_city"
+                            android:hint="@string/hint_employee_city"
+                            android:inputType="textCapWords"
+                            style="@style/EditorFieldStyle" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- Phone category -->
+                <LinearLayout
+                    android:id="@+id/employeePhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/category_phone"
+                        style="@style/CategoryStyle" />
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="4dp"
+                        android:orientation="vertical">
+
+                        <!-- Name field -->
+                        <EditText
+                            android:id="@+id/edit_employee_phone"
+                            android:hint="@string/hint_employee_phone"
+                            android:inputType="phone"
+                            style="@style/EditorFieldStyle" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <!-- Email category -->
+                <LinearLayout
+                    android:id="@+id/employeeEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/category_email"
+                        style="@style/CategoryStyle" />
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="4dp"
+                        android:orientation="vertical">
+
+                        <!-- Name field -->
+                        <EditText
+                            android:id="@+id/edit_employee_email"
+                            android:hint="@string/hint_employee_email"
+                            android:inputType="textEmailAddress"
+                            style="@style/EditorFieldStyle" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- Gender category -->
+                <LinearLayout
+                    android:id="@+id/container_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Label -->
+                    <TextView
+                        android:text="@string/category_gender"
+                        style="@style/CategoryStyle" />
+
+                    <!-- Input field -->
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <!-- Gender drop-down spinner -->
+                        <Spinner
+                            android:id="@+id/spinner_gender"
+                            android:layout_height="48dp"
+                            android:layout_width="wrap_content"
+                            android:paddingRight="16dp"
+                            android:spinnerMode="dropdown"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+</com.hendraanggrian.widget.RevealFrameLayout>
